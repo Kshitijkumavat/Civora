@@ -22,7 +22,7 @@ const MOCK_SEGMENTS = [
 ];
 
 // Set USE_MOCK = false once backend is live
-const USE_MOCK = true;
+const USE_MOCK = false;
 // ────────────────────────────────────────────────────────────────────────────
 
 export default function Dashboard({ onUploadMore }) {
