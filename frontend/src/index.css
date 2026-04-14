@@ -1,3 +1,8 @@
+html {
+  background: var(--bg);
+  color-scheme: light dark;
+}
+
 :root {
   --text: #6b6375;
   --text-h: #08060d;
@@ -17,7 +22,6 @@
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
-  color-scheme: light dark;
   color: var(--text);
   background: var(--bg);
   font-synthesis: none;
@@ -45,6 +49,10 @@
       rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.25) 0 4px 6px -2px;
   }
 
+  html {
+    background: #16171d;
+  }
+
   #social .button-icon {
     filter: invert(1) brightness(2);
   }
@@ -52,6 +60,7 @@
 
 body {
   margin: 0;
+  background: var(--bg);
 }
 
 #root {
@@ -59,7 +68,6 @@ body {
   max-width: 100%;
   margin: 0 auto;
   text-align: center;
-  border-inline: 1px solid var(--border);
   min-height: 100svh;
   display: flex;
   flex-direction: column;
