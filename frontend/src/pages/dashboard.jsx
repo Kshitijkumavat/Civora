@@ -1,9 +1,9 @@
 import { useEffect, useMemo, useState } from "react";
 import axios from "axios";
-import KPIBar from "../components/KPIBar";
-import FilterBar from "../components/FilterBar";
-import TriageTable from "../components/TriageTable";
-import SegmentDetail from "../components/SegmentDetail";
+import KPIBar from "../components/Kpibar";
+import FilterBar from "../components/Filterbar";
+import TriageTable from "../components/Triagetable";
+import SegmentDetail from "../components/Segmentdetail";
 
 const MOCK_KPI = { RED: 12, YELLOW: 19, GREEN: 19, last_updated: new Date().toISOString() };
 
@@ -234,16 +234,32 @@ export default function Dashboard({ onUploadMore }) {
           <div style={{ border: "1px solid rgba(255,255,255,0.08)", borderRadius: "24px", padding: "24px", background: "linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02))", boxShadow: "0 22px 60px rgba(0, 0, 0, 0.26)" }}>
             <div style={{ display: "flex", alignItems: "flex-start", justifyContent: "space-between", gap: "16px", flexWrap: "wrap" }}>
               <div>
-                <div style={{ display: "inline-flex", alignItems: "center", gap: "10px", marginBottom: "16px" }}>
-                  <div style={{ width: "40px", height: "40px", borderRadius: "14px", background: "rgba(82, 199, 197, 0.12)", display: "grid", placeItems: "center" }}>
-                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
-                      <rect x="1" y="1" width="20" height="20" rx="5" stroke="#52C7C5" strokeWidth="1.2" fill="none" />
-                      <path d="M5 14h12M5 11h8M5 8h12" stroke="#52C7C5" strokeWidth="1.2" strokeLinecap="round" />
-                    </svg>
+                <div style={{ marginBottom: "16px" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: "14px", marginBottom: "2px" }}>
+                    <div style={{ width: "36px", height: "36px", borderRadius: "10px", background: "rgba(82,199,197,0.1)", border: "0.5px solid rgba(82,199,197,0.2)", display: "grid", placeItems: "center", flexShrink: 0 }}>
+                      <svg width="20" height="20" viewBox="0 0 22 22" fill="none">
+                        <rect x="1" y="1" width="20" height="20" rx="5" stroke="#52C7C5" strokeWidth="1.2" fill="none" />
+                        <path d="M5 14h12M5 11h8M5 8h12" stroke="#52C7C5" strokeWidth="1.2" strokeLinecap="round" />
+                      </svg>
+                    </div>
+                    <h1 style={{
+                      margin: 0,
+                      fontSize: "42px",
+                      fontWeight: 700,
+                      letterSpacing: "-0.04em",
+                      lineHeight: 1,
+                      background: "linear-gradient(135deg, #F6F8FA 30%, #52C7C5 100%)",
+                      WebkitBackgroundClip: "text",
+                      WebkitTextFillColor: "transparent",
+                      backgroundClip: "text",
+                    }}>
+                      Civora
+                    </h1>
                   </div>
-                  <div>
-                    <div style={{ fontSize: "12px", letterSpacing: "0.16em", textTransform: "uppercase", color: "#7F8B96" }}>Civora control room</div>
-                    <div style={{ fontSize: "28px", fontWeight: 700, color: "#F6F8FA", marginTop: "4px" }}>Road maintenance triage dashboard</div>
+                  <div style={{ paddingLeft: "50px" }}>
+                    <div style={{ fontSize: "11px", letterSpacing: "0.12em", textTransform: "uppercase", color: "#52C7C540", marginBottom: "0px" }}>
+                      Road Maintenance Triage Dashboard
+                    </div>
                   </div>
                 </div>
                 <div style={{ maxWidth: "760px", fontSize: "14px", lineHeight: 1.7, color: "#A8B3BD" }}>
